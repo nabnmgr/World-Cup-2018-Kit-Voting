@@ -1,0 +1,166 @@
+
+{
+  "kits": [
+    {
+      "team": "Argentina",
+      "flag": "/resources/img/flags/argentina.png",
+      "kit": "/resources/img/kits/argentina1.png"
+    },
+    {
+      "team": "Australia",
+      "flag": "/resources/img/flags/australia.png",
+      "kit": "/resources/img/kits/australia1.png"
+    },
+    {
+      "team": "Belgium",
+      "flag": "/resources/img/flags/belgium.png",
+      "kit": "/resources/img/kits/belgica1.png"
+    },
+    {
+      "team": "Brazil",
+      "flag": "/resources/img/flags/brazil.png",
+      "kit": "/resources/img/kits/brazil1.png"
+    },
+    {
+      "team": "Colombia",
+      "flag": "/resources/img/flags/colombia.png",
+      "kit": "/resources/img/kits/colombia1.png"
+    },
+    {
+      "team": "Costa Rica",
+      "flag": "/resources/img/flags/costa-rica.png",
+      "kit": "/resources/img/kits/costarica1.png"
+    },
+    {
+      "team": "Croatia",
+      "flag": "/resources/img/flags/croatia.png",
+      "kit": "/resources/img/kits/croatia1.png"
+    },
+    {
+      "team": "Denmark",
+      "flag": "/resources/img/flags/denmark.png",
+      "kit": "/resources/img/kits/denmark1.png"
+    },
+    {
+      "team": "Egypt",
+      "flag": "/resources/img/flags/egypt.png",
+      "kit": "/resources/img/kits/egypt1.png"
+    },
+    {
+      "team": "England",
+      "flag": "/resources/img/flags/england.png",
+      "kit": "/resources/img/kits/england1.png"
+    },
+    {
+      "team": "France",
+      "flag": "/resources/img/flags/france.png",
+      "kit": "/resources/img/kits/france1.png"
+    },
+    {
+      "team": "Germany",
+      "flag": "/resources/img/flags/germany.png",
+      "kit": "/resources/img/kits/germany1.png"
+    },
+    {
+      "team": "Iceland",
+      "flag": "/resources/img/flags/iceland.png",
+      "kit": "/resources/img/kits/iceland1.png"
+    },
+    {
+      "team": "Iran",
+      "flag": "/resources/img/flags/iran.png",
+      "kit": "/resources/img/kits/iran1.png"
+    },
+    {
+      "team": "Japan",
+      "flag": "/resources/img/flags/japan.png",
+      "kit": "/resources/img/kits/japan1.png"
+    },
+    {
+      "team": "Korea Republic",
+      "flag": "/resources/img/flags/south-korea.png",
+      "kit": "/resources/img/kits/korea1.png"
+    },
+    {
+      "team": "Mexico",
+      "flag": "/resources/img/flags/mexico.png",
+      "kit": "/resources/img/kits/mexico1.png"
+    },
+    {
+      "team": "Morocco",
+      "flag": "/resources/img/flags/morocco.png",
+      "kit": "/resources/img/kits/morocco1.png"
+    },
+    {
+      "team": "Nigeria",
+      "flag": "/resources/img/flags/nigeria.png",
+      "kit": "/resources/img/kits/nigeria1.png"
+    },
+    {
+      "team": "Panama",
+      "flag": "/resources/img/flags/panama.png",
+      "kit": "/resources/img/kits/panama1.png"
+    },
+    {
+      "team": "Peru",
+      "flag": "/resources/img/flags/peru.png",
+      "kit": "/resources/img/kits/peru1.png"
+    },
+    {
+      "team": "Poland",
+      "flag": "/resources/img/flags/poland.png",
+      "kit": "/resources/img/kits/poland1.png"
+    },
+    {
+      "team": "Portugal",
+      "flag": "/resources/img/flags/portugal.png",
+      "kit": "/resources/img/kits/portugal1.png"
+    },
+    {
+      "team": "Russia",
+      "flag": "/resources/img/flags/russia.png",
+      "kit": "/resources/img/kits/russia1.png"
+    },
+    {
+      "team": "Saudi Arabia",
+      "flag": "/resources/img/flags/saudi-arabia.png",
+      "kit": "/resources/img/kits/saudiarabia1.png"
+    },
+    {
+      "team": "Senegal",
+      "flag": "/resources/img/flags/senegal.png",
+      "kit": "/resources/img/kits/senegal1.png"
+    },
+    {
+      "team": "Serbia",
+      "flag": "/resources/img/flags/serbia.png",
+      "kit": "/resources/img/kits/serbia1.png"
+    },
+    {
+      "team": "Spain",
+      "flag": "/resources/img/flags/spain.png",
+      "kit": "/resources/img/kits/spain1.png"
+    },
+    {
+      "team": "Sweden",
+      "flag": "/resources/img/flags/sweden.png",
+      "kit": "/resources/img/kits/sweden1.png"
+    },
+    {
+      "team": "Switzerland",
+      "flag": "/resources/img/flags/switzerland.png",
+      "kit": "/resources/img/kits/switzerland1.png"
+    },
+    {
+      "team": "Tunisia",
+      "flag": "/resources/img/flags/tunisia.png",
+      "kit": "/resources/img/kits/tunisia1.png"
+    },
+    {
+      "team": "Uruguay",
+      "flag": "/resources/img/flags/uruguay.png",
+      "kit": "/resources/img/kits/uruguay1.png"
+    }
+
+  ]
+}
