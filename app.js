@@ -1,4 +1,5 @@
 
+
 const getTeams = async () => {
   const response = await fetch('/resources/teams.json');
   if (response.status === 200) {
@@ -9,19 +10,52 @@ const getTeams = async () => {
   }
 }
 
+let kits;
+
 const startApp = async () => {
   const data = await getTeams();
-  console.log(data.kits[31]);
-  // kitEl.src = team[2].home_kit;
-  // flagEl.src = team[2].flag;  
-  // nameEl.textContent = team[2].country;
+  kits = data.kits;
+  renderKits();
 }
 
 startApp();
 
 
-// const kitEl = document.querySelector('.team__kit');
-// const flagEl = document.querySelector('.team__flag');
-// const nameEl = document.querySelector('.team__name');
+const kitOneEl = document.querySelector('.team__kit--1');
+const flagOneEl = document.querySelector('.team__flag--1');
+const nameOneEl = document.querySelector('.team__name--1');
 
+const kitTwoEl = document.querySelector('.team__kit--2');
+const flagTwoEl = document.querySelector('.team__flag--2');
+const nameTwoEl = document.querySelector('.team__name--2');
 
+const renderKits = () => {
+  console.log(kits);
+  if(kits.length > 0) {
+    let randOne = Math.floor(Math.random() * kits.length);
+    console.log(randOne);
+  
+    kitOneEl.src = kits[randOne].kit;
+    flagOneEl.src = kits[randOne].flag;  
+    nameOneEl.textContent = kits[randOne].team;
+  
+    kits.splice(randOne, 1);
+  
+    let randTwo = Math.floor(Math.random() * kits.length);
+    console.log(randTwo);
+  
+    kitTwoEl.src = kits[randTwo].kit;
+    flagTwoEl.src = kits[randTwo].flag;  
+    nameTwoEl.textContent = kits[randTwo].team;
+  
+    kits.splice(randTwo, 1);
+  } else {
+    
+  }
+  
+}
+
+document.querySelector('.new').addEventListener('click', function(e) {
+  renderKits();
+  e.preventDefault();
+});
