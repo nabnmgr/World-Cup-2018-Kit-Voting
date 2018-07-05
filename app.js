@@ -1,4 +1,13 @@
+const kitOneEl = document.querySelector('.team__kit--1');
+const flagOneEl = document.querySelector('.team__flag--1');
+const nameOneEl = document.querySelector('.team__name--1');
 
+const kitTwoEl = document.querySelector('.team__kit--2');
+const flagTwoEl = document.querySelector('.team__flag--2');
+const nameTwoEl = document.querySelector('.team__name--2');
+
+const removeOne = document.querySelector('.remove--1');
+const removeTwo = document.querySelector('.remove--2');
 
 const getTeams = async () => {
   const response = await fetch('/resources/teams.json');
@@ -10,52 +19,70 @@ const getTeams = async () => {
   }
 }
 
-let kits;
+let kits, winner, trackOne, trackTwo;
+
 
 const startApp = async () => {
   const data = await getTeams();
   kits = data.kits;
+  trackTwo = kits.length;
   renderKits();
 }
 
 startApp();
 
 
-const kitOneEl = document.querySelector('.team__kit--1');
-const flagOneEl = document.querySelector('.team__flag--1');
-const nameOneEl = document.querySelector('.team__name--1');
-
-const kitTwoEl = document.querySelector('.team__kit--2');
-const flagTwoEl = document.querySelector('.team__flag--2');
-const nameTwoEl = document.querySelector('.team__name--2');
-
 const renderKits = () => {
-  console.log(kits);
-  if(kits.length > 0) {
-    let randOne = Math.floor(Math.random() * kits.length);
-    console.log(randOne);
-  
-    kitOneEl.src = kits[randOne].kit;
-    flagOneEl.src = kits[randOne].flag;  
-    nameOneEl.textContent = kits[randOne].team;
-  
-    kits.splice(randOne, 1);
-  
-    let randTwo = Math.floor(Math.random() * kits.length);
-    console.log(randTwo);
-  
-    kitTwoEl.src = kits[randTwo].kit;
-    flagTwoEl.src = kits[randTwo].flag;  
-    nameTwoEl.textContent = kits[randTwo].team;
-  
-    kits.splice(randTwo, 1);
-  } else {
-    
-  }
-  
+  newKitOne();
+  newKitTwo();
 }
 
-document.querySelector('.new').addEventListener('click', function(e) {
-  renderKits();
+
+const newKitOne = () => {
+  trackOne = 0;
+  kitOneEl.src = kits[trackOne].kit;
+  flagOneEl.src = kits[trackOne].flag; 
+  nameOneEl.textContent = kits[trackOne].team;
+  trackTwo = kits.length - 1;
+}
+
+
+removeOne.addEventListener('click', function(e) {
+  kits.splice(trackOne, 1);
+
+  if(trackTwo === 1){
+    console.log(`Winner`)
+    console.log(kits[0].team)
+    document.querySelector('.team-1').style.display = "none";
+    removeTwo.disabled = true;
+  } else {
+    newKitOne();
+  }
   e.preventDefault();
 });
+
+
+
+const newKitTwo = () => {
+  trackTwo = kits.length - 1;
+  kitTwoEl.src = kits[trackTwo].kit;
+  flagTwoEl.src = kits[trackTwo].flag;
+  nameTwoEl.textContent = kits[trackTwo].team;
+}
+
+removeTwo.addEventListener('click', function(e) {
+  kits.splice(trackTwo, 1);
+
+  if(trackTwo === 1){
+    console.log(`Winner`)
+    console.log(kits[0].team)
+    document.querySelector('.team-2').style.display = "none";
+    removeOne.disabled = true;
+  } else {
+    newKitTwo();
+  }
+  e.preventDefault();
+});
+
+
+

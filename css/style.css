@@ -11,12 +11,47 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #111;
+  color: #333;
   font-weight: 400;
-  line-height: 1.5; }
+  line-height: 1.5;
+  background: #a7ff7893;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a7ff7879, #a7ff7893);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a7ff7879, #a7ff7893);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+header {
+  min-height: 20vh; }
 
 .container {
   background: #eee;
   min-height: 100vh;
   width: 70%;
   margin: 0 auto; }
+
+main {
+  display: flex;
+  justify-content: space-evenly; }
+
+.team-1,
+.team-2 {
+  border-radius: 20px;
+  border: 2px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.team__name--1,
+.team__name--2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem; }
+
+.kits--grey {
+  filter: grayscale(1); }
+
+.btn--remove {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 1.6rem; }
