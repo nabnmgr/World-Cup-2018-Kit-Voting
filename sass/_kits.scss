@@ -1,8 +1,7 @@
-
-
 .team-1,
 .team-2 {
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   border: 1px solid #f1f2f6;
   display: flex;
   flex-direction: column;
@@ -34,7 +33,6 @@
     border-top-left-radius: 10px;
     color: #f1f2f6;
     margin-top: 1.5rem;
-
   }
 
   &__flag--1,
@@ -46,27 +44,58 @@
   }
 }
 
-
 .btn--remove {
   display: block;
   outline: none;
   border: 2px solid #c0392b;
   width: 100%;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  // border-bottom-left-radius: 20px;
+  // border-bottom-right-radius: 20px;
   background: #c0392b;
   text-transform: uppercase;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  padding: 1.6rem 0;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  padding: 1rem 0;
   // margin-top: 5rem;
   color: #f1f2f6;
-  font-weight: 600;
+  font-weight: 500;
   transition: all 0.2s;
   cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 
   &:hover {
     background: #e74c3c;
     border: 2px solid #e74c3c;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in 1 forwards;
+}
+
+.messages {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+
+  p {
+    font-size: 1.4rem;
+    text-align: center;
+    color: #222;
+    background: #f1f2f6;
+    padding: 0.4rem 1.2rem;
+    border-radius: 10px;
+    display: none;
+  }
+
+  a {
+    font-weight: 600;
   }
 }

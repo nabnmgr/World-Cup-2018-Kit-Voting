@@ -10,7 +10,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #333;
   font-weight: 400;
   line-height: 1.5;
@@ -18,32 +18,34 @@ body {
   background: linear-gradient(90deg, rgba(55, 255, 95, 0.802063) 0%, #75d991 50%, rgba(55, 255, 95, 0.802063) 100%);
   min-height: 100vh; }
 
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s; }
+
 header {
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f1f2f6;
-  margin-bottom: 4rem; }
+  margin-bottom: 5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02); }
+  header a:hover,
+  header a:active {
+    letter-spacing: 2.2px; }
   header h1 {
     text-transform: uppercase;
     color: #0bb93c;
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 2px; }
-  header a:link,
-  header a:visited {
-    text-decoration: none;
-    color: inherit;
-    transition: all .2s; }
-  header a:hover,
-  header a:active {
-    letter-spacing: 2.2px; }
   header .highlight {
     background: #0bb93c;
     color: #f1f2f6;
     font-weight: 500;
-    padding: 0 .6rem;
+    padding: 0 0.6rem;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px; }
 
@@ -55,16 +57,10 @@ main {
   display: flex;
   justify-content: space-evenly; }
 
-.messages {
-  display: flex;
-  justify-content: center;
-  font-size: 1.4rem;
-  color: #333;
-  margin-top: 3rem; }
-
 .team-1,
 .team-2 {
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   border: 1px solid #f1f2f6;
   display: flex;
   flex-direction: column;
@@ -102,17 +98,39 @@ main {
   outline: none;
   border: 2px solid #c0392b;
   width: 100%;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   background: #c0392b;
   text-transform: uppercase;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  padding: 1.6rem 0;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  padding: 1rem 0;
   color: #f1f2f6;
-  font-weight: 600;
+  font-weight: 500;
   transition: all 0.2s;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
   .btn--remove:hover {
     background: #e74c3c;
     border: 2px solid #e74c3c; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; } }
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in 1 forwards; }
+
+.messages {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem; }
+  .messages p {
+    font-size: 1.4rem;
+    text-align: center;
+    color: #222;
+    background: #f1f2f6;
+    padding: 0.4rem 1.2rem;
+    border-radius: 10px;
+    display: none; }
+  .messages a {
+    font-weight: 600; }

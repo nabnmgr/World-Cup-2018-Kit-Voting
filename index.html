@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +12,18 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
 </head>
+
 <body>
   <header>
-    <h1><a href="/">2018 World Cup <span class="highlight"> Kit Voting Game</span></a></h1>
+    <h1>
+      <a href="/">2018 World Cup
+        <span class="highlight"> Kit Voting Game</span>
+      </a>
+    </h1>
   </header>
   <div class="container">
     <main>
-      <div class="team-1">
+      <div class="team-1 fade-in">
         <img class="team__kit team__kit--1" src="">
         <div class="team__info">
           <img class="team__flag--1" src="">
@@ -25,8 +31,8 @@
         </div>
         <button class="btn--remove remove--1">Eliminate</button>
       </div>
-  
-      <div class="team-2">
+
+      <div class="team-2 fade-in">
         <img class="team__kit team__kit--2" src="">
         <div class="team__info">
           <img class="team__flag--2" src="">
@@ -36,10 +42,11 @@
       </div>
     </main>
     <div class="messages">
-      <p class="teams-left"></p>
+      <p class="game-status"></p>
     </div>
   </div>
-  
+
   <script src="app.js"></script>
 </body>
+
 </html>
