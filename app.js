@@ -9,6 +9,8 @@ const nameTwoEl = document.querySelector('.team__name--2');
 const removeOne = document.querySelector('.remove--1');
 const removeTwo = document.querySelector('.remove--2');
 
+const teamsLeft = document.querySelector('.teams-left');
+
 const getTeams = async () => {
   const response = await fetch('/resources/teams.json');
   if (response.status === 200) {
@@ -26,7 +28,17 @@ const startApp = async () => {
   const data = await getTeams();
   kits = data.kits;
   trackTwo = kits.length;
+  shuffleKits(kits);
   renderKits();
+}
+
+const shuffleKits = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
 }
 
 startApp();
@@ -39,6 +51,7 @@ const renderKits = () => {
 
 
 const newKitOne = () => {
+  console.log(kits);
   trackOne = 0;
   kitOneEl.src = kits[trackOne].kit;
   flagOneEl.src = kits[trackOne].flag; 
@@ -57,6 +70,7 @@ removeOne.addEventListener('click', function(e) {
     removeTwo.disabled = true;
   } else {
     newKitOne();
+    teamsLeft.textContent = (kits.length - 2 === 0) ? 'FINAL' : kits.length - 2 + ' team(s) after this'
   }
   e.preventDefault();
 });
@@ -64,6 +78,7 @@ removeOne.addEventListener('click', function(e) {
 
 
 const newKitTwo = () => {
+  console.log(kits);
   trackTwo = kits.length - 1;
   kitTwoEl.src = kits[trackTwo].kit;
   flagTwoEl.src = kits[trackTwo].flag;
@@ -80,6 +95,7 @@ removeTwo.addEventListener('click', function(e) {
     removeOne.disabled = true;
   } else {
     newKitTwo();
+    teamsLeft.textContent = (kits.length - 2 === 0) ? 'FINAL' : kits.length - 2 + ' team(s) after this';
   }
   e.preventDefault();
 });

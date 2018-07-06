@@ -13,26 +13,33 @@
 </head>
 <body>
   <header>
+    <h1><a href="/">2018 World Cup <span class="highlight"> Kit Voting Game</span></a></h1>
   </header>
-  <main>
-    <div class="team-1">
-      <img class="team__kit team__kit--1" src="">
-      <img class="team__flag--1" src="">
-      <p class="team__name--1"></p>
-      <button class="btn--remove remove--1">Remove</button>
+  <div class="container">
+    <main>
+      <div class="team-1">
+        <img class="team__kit team__kit--1" src="">
+        <div class="team__info">
+          <img class="team__flag--1" src="">
+          <p class="team__name--1"></p>
+        </div>
+        <button class="btn--remove remove--1">Eliminate</button>
+      </div>
+  
+      <div class="team-2">
+        <img class="team__kit team__kit--2" src="">
+        <div class="team__info">
+          <img class="team__flag--2" src="">
+          <p class="team__name--2"></p>
+        </div>
+        <button class="btn--remove remove--2">Eliminate</button>
+      </div>
+    </main>
+    <div class="messages">
+      <p class="teams-left"></p>
     </div>
-
-    <div class="team-2">
-      <img class="team__kit team__kit--2" src="">
-      <img class="team__flag--2" src="">
-      <p class="team__name--2"></p>
-      <button class="btn--remove remove--2">Remove</button>
-    </div>
-    
-  </main>
-
-
-
+  </div>
+  
   <script src="app.js"></script>
 </body>
 </html>
