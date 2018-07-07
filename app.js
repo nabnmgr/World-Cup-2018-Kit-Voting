@@ -1,5 +1,3 @@
-// Need to optimise the code.
-
 const kitOneEl = document.querySelector(".team__kit--1");
 const flagOneEl = document.querySelector(".team__flag--1");
 const nameOneEl = document.querySelector(".team__name--1");
@@ -13,6 +11,8 @@ const removeTwo = document.querySelector(".remove--2");
 
 const teamInfo = document.querySelector(".team__info");
 const gameStatusMsg = document.querySelector(".game-status");
+
+// Getting local json
 
 const getTeams = async () => {
   const response = await fetch("/resources/teams.json");
@@ -59,31 +59,6 @@ const newKitOne = () => {
   trackTwo = kits.length - 1;
 };
 
-removeOne.addEventListener("click", function(e) {
-  // fade ins
-  kitOneEl.classList.add("fade-in");
-  setTimeout(() => kitOneEl.classList.remove("fade-in"), 400);
-
-  kits.splice(trackOne, 1);
-  gameStatusMsg.style.display = "inline-block";
-
-  // check if the kit is the last one
-  if (trackTwo === 1) {
-    document.querySelector(".team-1").style.display = "none";
-    gameStatusMsg.textContent = `The home kit of ${
-      kits[0].team
-    } is the WINNER. `;
-    gameStatusMsg.innerHTML += '<a href="/">Replay?</a>';
-    teamInfo.style.display = "none";
-    removeTwo.style.display = "none";
-  } else {
-    newKitOne();
-    gameStatusMsg.textContent =
-      kits.length - 2 === 0 ? "FINAL" : kits.length - 2 + " more coming up";
-  }
-  e.preventDefault();
-});
-
 const newKitTwo = () => {
   trackTwo = kits.length - 1;
   kitTwoEl.src = kits[trackTwo].kit;
@@ -91,26 +66,43 @@ const newKitTwo = () => {
   nameTwoEl.textContent = kits[trackTwo].team;
 };
 
-removeTwo.addEventListener("click", function(e) {
-  // fade ins
-  kitTwoEl.classList.add("fade-in");
-  setTimeout(() => kitTwoEl.classList.remove("fade-in"), 300);
+document.getElementById("main").addEventListener("click", e => {
+  if (e.target.matches(".remove--1")) {
+    kits.splice(trackOne, 1);
+    gameStatusMsg.style.display = "inline-block";
 
-  kits.splice(trackTwo, 1);
-  gameStatusMsg.style.display = "inline-block";
+    // check if the kit is the last one
+    if (trackTwo === 1) {
+      document.querySelector(".team-1").style.display = "none";
+      gameStatusMsg.textContent = `The home kit of ${
+        kits[0].team
+      } is the WINNER. `;
+      gameStatusMsg.innerHTML += '<a href="/">Replay?</a>';
+      teamInfo.style.display = "none";
+      removeTwo.style.display = "none";
+    } else {
+      newKitOne();
+      gameStatusMsg.textContent =
+        kits.length - 2 === 0 ? "FINAL" : kits.length - 2 + " more coming up";
+    }
+  } else if (e.target.matches(".remove--2")) {
+    kits.splice(trackTwo, 1);
+    gameStatusMsg.style.display = "inline-block";
 
-  if (trackTwo === 1) {
-    document.querySelector(".team-2").style.display = "none";
-    gameStatusMsg.textContent = `The home kit of ${
-      kits[0].team
-    } is the WINNER. `;
-    gameStatusMsg.innerHTML += '<a href="/">Replay?</a>';
-    teamInfo.style.display = "none";
-    removeOne.style.display = "none";
-  } else {
-    newKitTwo();
-    gameStatusMsg.textContent =
-      kits.length - 2 === 0 ? "FINAL" : kits.length - 2 + " more coming up";
+    if (trackTwo === 1) {
+      document.querySelector(".team-2").style.display = "none";
+      gameStatusMsg.textContent = `The home kit of ${
+        kits[0].team
+      } is the WINNER. `;
+      gameStatusMsg.innerHTML += '<a href="/">Replay?</a>';
+      teamInfo.style.display = "none";
+      removeOne.style.display = "none";
+    } else {
+      newKitTwo();
+      gameStatusMsg.textContent =
+        kits.length - 2 === 0 ? "FINAL" : kits.length - 2 + " more coming up";
+    }
   }
+
   e.preventDefault();
 });

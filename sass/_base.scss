@@ -25,6 +25,7 @@ body {
     rgba(55, 255, 95, 0.8020628173144257) 100%
   );
   min-height: 100vh;
+  position: relative;
 }
 a:link,
 a:visited {
@@ -71,6 +72,16 @@ main {
   justify-content: space-evenly;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    text-align: center;
+  }
+}
+
 // RESPONSIVE
 @media only screen and (max-width: 900px) {
   .container {
@@ -92,6 +103,11 @@ main {
       font-size: 1.8rem;
     }
   }
+
+  .container {
+    max-width: 70%;
+  }
+
   main {
     flex-direction: column;
     justify-content: space-between;
