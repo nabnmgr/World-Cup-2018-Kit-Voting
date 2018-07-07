@@ -52,7 +52,7 @@ const renderKits = () => {
 };
 
 const newKitOne = () => {
-  trackOne = 0;
+  trackOne = 0; // variable for readability
   kitOneEl.src = kits[trackOne].kit;
   flagOneEl.src = kits[trackOne].flag;
   nameOneEl.textContent = kits[trackOne].team;
@@ -67,6 +67,7 @@ removeOne.addEventListener("click", function(e) {
   kits.splice(trackOne, 1);
   gameStatusMsg.style.display = "inline-block";
 
+  // check if the kit is the last one
   if (trackTwo === 1) {
     document.querySelector(".team-1").style.display = "none";
     gameStatusMsg.textContent = `The home kit of ${
@@ -78,9 +79,7 @@ removeOne.addEventListener("click", function(e) {
   } else {
     newKitOne();
     gameStatusMsg.textContent =
-      kits.length - 2 === 0
-        ? "FINAL"
-        : kits.length - 2 + " more kit(s) coming up";
+      kits.length - 2 === 0 ? "FINAL" : kits.length - 2 + " more coming up";
   }
   e.preventDefault();
 });
@@ -107,13 +106,11 @@ removeTwo.addEventListener("click", function(e) {
     } is the WINNER. `;
     gameStatusMsg.innerHTML += '<a href="/">Replay?</a>';
     teamInfo.style.display = "none";
-    removeTwo.style.display = "none";
+    removeOne.style.display = "none";
   } else {
     newKitTwo();
     gameStatusMsg.textContent =
-      kits.length - 2 === 0
-        ? "FINAL"
-        : kits.length - 2 + " more kit(s) coming up";
+      kits.length - 2 === 0 ? "FINAL" : kits.length - 2 + " more coming up";
   }
   e.preventDefault();
 });

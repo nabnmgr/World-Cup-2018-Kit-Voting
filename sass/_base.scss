@@ -26,14 +26,13 @@ body {
   );
   min-height: 100vh;
 }
-
 a:link,
 a:visited {
   text-decoration: none;
+
   color: inherit;
   transition: all 0.2s;
 }
-
 header {
   height: 60px;
   display: flex;
@@ -42,12 +41,10 @@ header {
   background: #f1f2f6;
   margin-bottom: 5rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
-
   a:hover,
   a:active {
     letter-spacing: 2.2px;
   }
-
   h1 {
     text-transform: uppercase;
     color: rgb(11, 185, 60);
@@ -55,7 +52,6 @@ header {
     font-weight: 600;
     letter-spacing: 2px;
   }
-
   .highlight {
     background: rgb(11, 185, 60);
     color: #f1f2f6;
@@ -65,14 +61,43 @@ header {
     border-bottom-right-radius: 10px;
   }
 }
-
 .container {
   // border: 1px solid #333;
   max-width: 70%;
   margin: 0 auto;
 }
-
 main {
   display: flex;
   justify-content: space-evenly;
+}
+
+// RESPONSIVE
+@media only screen and (max-width: 900px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    max-width: 90%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header {
+    margin-bottom: 1rem;
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  main {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .btn--remove.btn--remove {
+    padding: 1.5rem 0;
+  }
 }
