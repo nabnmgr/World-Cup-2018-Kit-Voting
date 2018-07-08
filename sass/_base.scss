@@ -24,6 +24,8 @@ body {
     rgba(117, 217, 145, 1) 50%,
     rgba(55, 255, 95, 0.8020628173144257) 100%
   );
+  min-height: 100vh;
+  position: relative;
 }
 a:link,
 a:visited {
@@ -64,8 +66,6 @@ header {
   // border: 1px solid #333;
   max-width: 60%;
   margin: 0 auto;
-  min-height: 100vh;
-  position: relative;
 }
 main {
   display: flex;
