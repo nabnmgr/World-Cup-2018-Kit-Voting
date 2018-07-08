@@ -24,8 +24,6 @@ body {
     rgba(117, 217, 145, 1) 50%,
     rgba(55, 255, 95, 0.8020628173144257) 100%
   );
-  min-height: 100vh;
-  position: relative;
 }
 a:link,
 a:visited {
@@ -35,12 +33,12 @@ a:visited {
   transition: all 0.2s;
 }
 header {
-  height: 60px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f1f2f6;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
   a:hover,
   a:active {
@@ -49,7 +47,7 @@ header {
   h1 {
     text-transform: uppercase;
     color: rgb(11, 185, 60);
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 600;
     letter-spacing: 2px;
   }
@@ -64,8 +62,10 @@ header {
 }
 .container {
   // border: 1px solid #333;
-  max-width: 70%;
+  max-width: 60%;
   margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
 }
 main {
   display: flex;
@@ -93,7 +93,7 @@ footer {
     font-size: 50%;
   }
   .container {
-    max-width: 90%;
+    max-width: 85%;
   }
 }
 @media only screen and (max-width: 500px) {

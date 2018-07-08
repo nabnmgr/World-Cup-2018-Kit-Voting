@@ -15,9 +15,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   background: #37ff5f;
-  background: linear-gradient(90deg, rgba(55, 255, 95, 0.802063) 0%, #75d991 50%, rgba(55, 255, 95, 0.802063) 100%);
-  min-height: 100vh;
-  position: relative; }
+  background: linear-gradient(90deg, rgba(55, 255, 95, 0.802063) 0%, #75d991 50%, rgba(55, 255, 95, 0.802063) 100%); }
 
 a:link,
 a:visited {
@@ -26,12 +24,12 @@ a:visited {
   transition: all 0.2s; }
 
 header {
-  height: 60px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f1f2f6;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02); }
   header a:hover,
   header a:active {
@@ -39,7 +37,7 @@ header {
   header h1 {
     text-transform: uppercase;
     color: #0bb93c;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 600;
     letter-spacing: 2px; }
   header .highlight {
@@ -51,8 +49,10 @@ header {
     border-bottom-right-radius: 10px; }
 
 .container {
-  max-width: 70%;
-  margin: 0 auto; }
+  max-width: 60%;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative; }
 
 main {
   display: flex;
@@ -73,7 +73,7 @@ footer {
   html {
     font-size: 50%; }
   .container {
-    max-width: 90%; } }
+    max-width: 85%; } }
 
 @media only screen and (max-width: 500px) {
   header {
@@ -96,13 +96,14 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px; }
+  margin: 15px;
+  max-width: 360px; }
 
 .team__name--1, .team__name--2 {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: 1.4rem; }
+  font-size: 1.3rem; }
 
 .team__kit {
   width: 100%; }
@@ -155,8 +156,8 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2rem 0; }
-  .messages p {
-    font-size: 1.4rem;
+  .messages .game-status {
+    font-size: 1.2rem;
     text-align: center;
     color: #222;
     background: #f1f2f6;
